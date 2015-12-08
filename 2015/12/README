@@ -2,3 +2,9 @@
 -----------
 Inspired by HandmadeCon, and in particular by Mike Acton's advice on practice; this is a simple program built
 in 30 minutes intended to develop my familiarity with SDL.
+
+2015-12-07:
+-----------
+Futzing around with stb_truetype as preparatory work for getting font rendering work in another project.
+This took *way* too long to finish.
+My intention was for about 30 minutes, but I wound up taking close to 2 hours.
