@@ -1,0 +1,29 @@
+Joystick input!
+I picked up a Madcatz stick of some sort so I could play space shooters and 6DOF shooters.
+Ever since then I've been thinking of hooking it up for game prototypes.
+Well, this is the first step!
+
+This was intended to be a 30 minute task, but took just over 60 minutes.
+
+Requirements:
+
+- gcc
+- sdl2
+- nemiver (for using the `debug' command)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run
+
+Debugging:
+
+> debug

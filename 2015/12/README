@@ -1,10 +1,17 @@
-2015-12-06:
+2015-12-08:
 -----------
-Inspired by HandmadeCon, and in particular by Mike Acton's advice on practice; this is a simple program built
-in 30 minutes intended to develop my familiarity with SDL.
+Joystick input!
+I picked up a Madcatz stick of some sort so I could play space shooters and 6DOF shooters.
+Ever since then I've been thinking of hooking it up for game prototypes.
+Well, this is the first step!
 
 2015-12-07:
 -----------
 Futzing around with stb_truetype as preparatory work for getting font rendering work in another project.
 This took *way* too long to finish.
 My intention was for about 30 minutes, but I wound up taking close to 2 hours.
+
+2015-12-06:
+-----------
+Inspired by HandmadeCon, and in particular by Mike Acton's advice on practice; this is a simple program built
+in 30 minutes intended to develop my familiarity with SDL.
