@@ -15,6 +15,12 @@ On the good side, I learned some things about Pitch and the SDL Texture APIs tha
 didn't understand before.  This will directly benefit my software renderer.
   (See: https://bitbucket.org/GrooveStomp/software-renderer/src)
 
+ClearSans font from FontSquirrel: http://www.fontsquirrel.com/fonts/clear-sans
+ClearSans License: Apache v2: http://www.fontsquirrel.com/fonts/clear-sans
+
+STB TrueType library from Sean Barrett: https://github.com/nothings/stb/blob/master/stb_truetype.h
+STB TrueType License: Public Domain: https://github.com/nothings/stb#whats-the-license
+
 Requirements:
 
 - gcc
