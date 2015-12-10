@@ -1,0 +1,20 @@
+Bezier curves!
+I received two issues of pico-8 zine (http://pico8fanzine.bigcartel.com/) in the mail today. After flipping
+through, I felt motivated to create something.  I also figured that Pico8 is sort of an ideal tool for
+daily code practice, as it gives such easy access to drawing, input and sound.
+
+Because Pico 8 is a closed proprietary system, I've included the source as a plaintext file.
+
+Requirements:
+
+- Pico 8: http://www.lexaloffle.com/pico-8.php
+
+Setup:
+
+Simply put `bezier.p8' into the cart directory for your system:
+
+Windows: C:/Users/Yourname/AppData/Roaming/pico-8/carts
+OSX: /Users/Yourname/Library/Application Support/pico-8/carts
+Linux: ~/.lexaloffle/pico-8/carts
+
+See: http://www.lexaloffle.com/pico-8.php?page=manual
