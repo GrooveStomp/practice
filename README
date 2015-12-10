@@ -2,6 +2,11 @@ My ongoing collection of daily code practice.
 Inspired by Mike Acton at the inaugural HandmadeCon in 2015, these are small, throwaway programs used to hone
 my craft.
 
+Unless otherwise stated, all source code here uses the Createive Commons Attribution 4.0 International License.
+See: https://creativecommons.org/licenses/by/4.0/
+See: https://creativecommons.org/licenses/by/4.0/legalcode
+Attribution is appreciated, though not required.
+
 Because this is intended to be a daily, ongoing thing, this repository is structured according to calendar
 dates.  You will find folders named according to year at this level, followed by folders for each month,
 followed then by folders for each day.  Each day will be entirely self-contained, but I will copy the
