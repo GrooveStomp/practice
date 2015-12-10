@@ -3,7 +3,7 @@ I received two issues of pico-8 zine (http://pico8fanzine.bigcartel.com/) in the
 through, I felt motivated to create something.  I also figured that Pico8 is sort of an ideal tool for
 daily code practice, as it gives such easy access to drawing, input and sound.
 
-Because Pico 8 is a closed proprietary system, I've included the source as a plaintext file.
+Because Pico 8 is a closed proprietary system, I've included the source as a separate lua file.
 
 Requirements:
 

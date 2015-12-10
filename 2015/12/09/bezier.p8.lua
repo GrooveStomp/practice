@@ -22,7 +22,7 @@ end
 function _draw()
  cls()
  for pt in all(ctrl_pts) do
-		circfill(pt.x, pt.y, 2, 14)
+  circfill(pt.x, pt.y, 2, 14)
 	end
 
 	for x=1,100 do
