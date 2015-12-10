@@ -23,13 +23,13 @@ function _draw()
  cls()
  for pt in all(ctrl_pts) do
   circfill(pt.x, pt.y, 2, 14)
-	end
+  end
 
-	for x=1,100 do
-	 t = x / 100
-	 pt = bezier(ctrl_pts, t)
-	 pset(pt.x, pt.y, 7)
-	end
+  for x=1,100 do
+   t = x / 100
+   pt = bezier(ctrl_pts, t)
+   pset(pt.x, pt.y, 7)
+  end
 end
 
 function _init()
