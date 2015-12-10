@@ -11,7 +11,7 @@ Requirements:
 
 Setup:
 
-Simply put `bezier.p8' into the cart directory for your system:
+Simply put `bezier.p8.png' into the cart directory for your system:
 
 Windows: C:/Users/Yourname/AppData/Roaming/pico-8/carts
 OSX: /Users/Yourname/Library/Application Support/pico-8/carts
