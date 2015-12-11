@@ -28,11 +28,11 @@ end
 function _draw()
  cls()
 
-	for x=1,200 do
-	 t = x / 200
-	 pt = bezier(ctrl_pts, t, false)
-	 pset(pt.x, pt.y, 7)
-	end
+  for x=1,200 do
+   t = x / 200
+   pt = bezier(ctrl_pts, t, false)
+   pset(pt.x, pt.y, 7)
+  end
 
  x+=incr
  if (x>=100) incr=-1
@@ -40,9 +40,9 @@ function _draw()
  currpt = bezier(ctrl_pts, x/100, true)
 
  for pt in all(ctrl_pts) do
-		circfill(pt.x, pt.y, 2, 14)
-	end
-	circfill(currpt.x, currpt.y, 2, 6)
+    circfill(pt.x, pt.y, 2, 14)
+  end
+  circfill(currpt.x, currpt.y, 2, 6)
 end
 
 function _init()
