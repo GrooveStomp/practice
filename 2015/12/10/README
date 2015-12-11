@@ -1,0 +1,23 @@
+More Bezier curves! Animated, this time.
+
+Mike Acton himself responded to my last practice:
+
+"@GrooveStomp For a follow-up from today, it might be a useful exercise to duplicate this visualization. https://t.co/esnSTxxPbI"
+https://twitter.com/mike_acton/status/674774147017277440
+
+Done and done!
+I haven't done curve visualization since university, and it's really great to be retreading this ground.
+
+Requirements:
+
+- Pico 8: http://www.lexaloffle.com/pico-8.php
+
+Setup:
+
+Simply put `animated_bezier.p8.png' into the cart directory for your system:
+
+Windows: C:/Users/Yourname/AppData/Roaming/pico-8/carts
+OSX: /Users/Yourname/Library/Application Support/pico-8/carts
+Linux: ~/.lexaloffle/pico-8/carts
+
+See: http://www.lexaloffle.com/pico-8.php?page=manual
