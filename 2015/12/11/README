@@ -1,0 +1,33 @@
+A very small ASM program copied from Wikipedia.
+
+The inspiration for this particular project is a little indirect.
+I was actually bereft of ideas for programming tonight due to my severe lack of available time.
+I had the fun idea of writing an extremely simple virtual machine, then got stuck on the idea of a simulator
+vs. a compiler. That is, dynamically executing incoming instructions, or generating machine output.
+While following these thoughts, I remember a previous coworker who would write programs directly in ASM
+and apparently decided to take a stab at that.
+Along the way I ran into some difficulties, because I have a shell alias:
+
+  alias ld="ls -Alhd"
+
+So trying to execute the command `ld` was most certainly not working as anticipated.
+Once that was resolved, the rest was smooth sailing.  Unfortunately, this only left time to just copy an
+example from Wikipedia and not do any exploration on my own.
+
+Requirements:
+
+- nasm
+- ld
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run
