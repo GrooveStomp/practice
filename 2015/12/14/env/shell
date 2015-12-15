@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#-*- mode: sh -*-
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+function build() {
+    if [ ! -f env/build ]; then
+        mkdir -p env/build
+    fi
+
+    nasm -f elf64 main.asm -o env/build/main.o
+    ld -o env/build/run env/build/main.o
+}
+
+function run() {
+    if [ -f env/build/run ]; then
+        env/build/run
+    fi
+}
+
+function disassemble() {
+    if [ ! -f env/build ]; then
+        mkdir -p env/build
+    fi
+
+    gcc -O2 -c to_dump.c -o env/build/to_dump.o
+    objdump -S -D --disassembler-options=intel env/build/to_dump.o
+}

@@ -1,0 +1,62 @@
+More Assembly.
+Today was mostly just reading and thinking.
+I'm following the suggestion made here:
+
+  https://stackoverflow.com/questions/15297842/intel-x86-64-assembly-tutorials-or-book/15299461#15299461
+
+Unfortunately, I haven't made very much progress.
+I downloaded the Intel Developer Manuals here:
+
+  https://www-ssl.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html
+
+I've also looked at various posts and papers introducing x64 assembly programming.
+
+My goal was to understand function calling syntax.  I partially achieved that goal tonight when reading the
+MSDN docs on the subject.  Unfortunately, that doesn't necessarily help me on Linux.
+
+I'm trying to understand how the `call' instruction works. My disassembled code shows this:
+
+  0000000000000000 <MyFn>:
+     0: 55                    push rbp
+    ...
+
+  0000000000000023 <main>:
+    23: 55                    push   rbp
+    24: 48 89 e5              mov    rbp,rsp
+    27: 48 83 ec 10           sub    rsp,0x10
+    2b: 89 7d fc              mov    DWORD PTR [rbp-0x4],edi
+    2e: 48 89 75 f0           mov    QWORD PTR [rbp-0x10],rsi
+    32: be 02 00 00 00        mov    esi,0x2
+    37: bf 01 00 00 00        mov    edi,0x1
+    3c: e8 00 00 00 00        call   41 <main+0x1e>
+    41: 89 c6                 move   esi,eax
+    ...
+
+I can't quite understand how that works. The intel manual says:
+
+  Saves procedure linking information on the stack and branches to the called procedure specified using the
+  target operand. The target operand specifies the address of the first instruction in the called procedure.
+  The operand can be an immediate value, a general-purpose register, or a memory location.
+
+That seems to indicate that `call 41' should be calling into the subroutine located at line 41, aka the next
+line after `call.'
+
+I can understand that `rsp' is important. It's the stack pointer.  `rbp' is the base pointer and is used
+in conjunction with `rsp'.  Beyond that... Not sure.  Clearly this `DWORD PTR' and `QWORD PTR' syntax is
+important.
+
+Requirements:
+
+- gcc
+- objdump
+- nasm (If you actually build a legit assembly file)
+- ld (See previous)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Running:
+
+> disassemble
