@@ -1,0 +1,33 @@
+Hash table in C.
+
+There is a bug. After printing the first result, the contents of the Hash are overwritten.
+
+This implementation has many shortcomings:
+
+- Does on-the-fly allocations.
+- Does a linear search for hashed keys.
+- Doesn't handle key hash collisions.
+- No mechanism for expanding the size of the hash if it's full.
+- More...
+
+Requirements:
+
+- gcc
+- nemiver (for using the `debug' command)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run
+
+Debugging:
+
+> debug
