@@ -1,0 +1,30 @@
+Binary Insertion Tree in C.
+This is an implementation of a Binary insertion tree that uses a fixed, contiguous block of memory.
+There are several shortcomings so far, including:
+
+- Non-resizable
+- Simply returns `false' if insertion fails for any reason
+
+It appears to work so far, so that's awesome!
+
+Requirements:
+
+- gcc
+- nemiver (for using the `debug' command)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run
+
+Debugging:
+
+> debug

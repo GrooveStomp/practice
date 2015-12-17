@@ -1,3 +1,8 @@
+2015-12-16:
+-----------
+Binary Insertion Tree in C.
+This is an implementation of a Binary insertion tree that uses a fixed, contiguous block of memory.
+
 2015-12-15:
 -----------
 Naive Hash table implementation in C.
