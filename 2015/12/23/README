@@ -1,0 +1,26 @@
+Simple NCurses program.
+This is just some really basic modifications to a sample program from here:
+
+  http://www.tldp.org/HOWTO/NCURSES-Programming-HOWTO/intro.html#ABOUTPROGRAMS
+
+Requirements:
+
+- gcc
+- nemiver (for using the `debug' command)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run
+
+Debugging:
+
+> debug
