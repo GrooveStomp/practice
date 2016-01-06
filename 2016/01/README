@@ -1,0 +1,8 @@
+2016-01-05:
+-----------
+Tinkering with the Atari ST. Nothing to show, but I'll recap.
+I followed the ASM intro here: http://www.voidbred.com/blog/2014/09/programming-the-atari-st-20-years-later/
+Some tinkering with that, but only very minorly.
+Grabbed Hisoft's C from here: http://www.atarimania.com/utility-atari-st-hisoft-c_s20885.html
+Opened the PDF and implemented "Your first program." Played with the trace functionality and interpreter just briefly.
+Realized I need to make a custom keyboard mapping for Hatari + my Kinesis Advantage keyboard.
