@@ -1,3 +1,11 @@
+2016-01-06:
+-----------
+Direct framebuffer graphics programming!
+
+This is a quick 'n dirty hack job, just throwing together scraps that I could quickly find online.
+It does follow reading about framebuffer stuff on and off for a while.
+The code is really dirty and expects a resolution of 800x600.
+
 2016-01-05:
 -----------
 Tinkering with the Atari ST. Nothing to show, but I'll recap.

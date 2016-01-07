@@ -1,0 +1,27 @@
+Direct framebuffer graphics programming!
+
+This is a quick 'n dirty hack job, just throwing together scraps that I could quickly find online.
+It does follow reading about framebuffer stuff on and off for a while.
+The code is really dirty and expects a resolution of 800x600.
+
+Requirements:
+
+- gcc
+- linux
+- nemiver (for using the `debug' command)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+# First switch to a TTY. On LXLE I do: ctrl + alt + F6.
+> cd /path/to/project/root
+> source env/shell
+> run
