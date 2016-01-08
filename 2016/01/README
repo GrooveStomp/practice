@@ -1,3 +1,17 @@
+2016-01-07:
+-----------
+Investigation of changing framebuffer settings.
+Learned:
+  - `ioctl' is a general purpose mechanism for interacting with non-standard components. ie., Framebuffer.
+  - fbset is a program that reports information for the specified framebuffer (/dev/fb0)
+  - fbset presumably lets you modify framebuffer settings, though I couldn't get it to work.
+  - It looks like you have to modify boot parameters to choose different framebuffer settings.
+  - Framebuffer settings are not completely customizable.
+    (https://www.raspberrypi.org/forums/viewtopic.php?t=30038&p=267956)
+    Apparently the maximum supported vertical resolution is 1200?
+All this is leading me to think that using the framebuffer is not a *great* solution, unless "standard"
+resolutions like 800x600 or 1024x768 are okay.  1280x720 isn't in my `/etc/fb.modes', for instance.
+
 2016-01-06:
 -----------
 Direct framebuffer graphics programming!
