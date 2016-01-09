@@ -1,0 +1,21 @@
+Socket programming introduction thanks to Gaffer on Games (http://gafferongames.com/networking-for-game-programmers/sending-and-receiving-packets/)
+This is a straight-up copy of the sample code from Glenn Fiedler, with a super light API thrown on top of init and send.
+The API is not great and not complete, but it works for what I wanted.
+
+Requirements:
+
+- unixy platform that supports bsd sockets
+- gcc
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run

@@ -1,3 +1,9 @@
+2016-01-08:
+-----------
+Socket programming introduction thanks to Gaffer on Games (http://gafferongames.com/networking-for-game-programmers/sending-and-receiving-packets/)
+This is a straight-up copy of the sample code from Glenn Fiedler, with a super light API thrown on top of init and send.
+The API is not great and not complete, but it works for what I wanted.
+
 2016-01-07:
 -----------
 Investigation of changing framebuffer settings.
