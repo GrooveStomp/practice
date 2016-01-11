@@ -1,0 +1,18 @@
+Requirements:
+
+- unixy platform that supports bsd sockets
+- gcc
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> server & # Runs server
+> client   # Runs client
