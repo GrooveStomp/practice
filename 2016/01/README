@@ -1,3 +1,11 @@
+2016-01-11:
+-----------
+Unix Sockets.
+I don't know how to clean up the socket file when terminating the server.
+The server does a double forever loop and exits out when the signal ctrl+C is sent.
+Whenever I figure out how to do signal trapping in C, then I'll fix that.
+This project is the result of my investigation to client-server socket communication on a single host.
+
 2016-01-08:
 -----------
 Socket programming introduction thanks to Gaffer on Games (http://gafferongames.com/networking-for-game-programmers/sending-and-receiving-packets/)

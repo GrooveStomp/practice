@@ -1,3 +1,9 @@
+Unix Sockets.
+I don't know how to clean up the socket file when terminating the server.
+The server does a double forever loop and exits out when the signal ctrl+C is sent.
+Whenever I figure out how to do signal trapping in C, then I'll fix that.
+This project is the result of my investigation to client-server socket communication on a single host.
+
 Requirements:
 
 - unixy platform that supports bsd sockets
@@ -16,3 +22,5 @@ Running:
 
 > server & # Runs server
 > client   # Runs client
+
+Terminate the server with Ctrl+C
