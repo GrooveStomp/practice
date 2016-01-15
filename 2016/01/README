@@ -1,3 +1,9 @@
+2016-01-15:
+-----------
+IPV4 Networking - Actually Working!
+I did a little research on the way in this morning and realized I was incorrectly binding the client socket.
+I removed that and included <arpa/inet.h> so I could directly translate a dotted IP string to network binary; and voila!
+
 2016-01-14-2:
 -------------
 IPV4 Networking.

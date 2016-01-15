@@ -1,0 +1,24 @@
+IPV4 Networking - Actually Working!
+I did a little research on the way in this morning and realized I was incorrectly binding the client socket.
+I removed that and included <arpa/inet.h> so I could directly translate a dotted IP string to network binary; and voila!
+
+Requirements:
+
+- unixy platform that supports bsd sockets
+- gcc
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> server & # Runs server
+> client   # Runs client
+
+Terminate the server with Ctrl+C
