@@ -1,3 +1,10 @@
+2016-01-14:
+-----------
+Signal trapping.
+This is a modification from 2016-01-11.
+- Implements proper signal trapping in server.c so the socket file cleans up properly.
+- Uses stdlib.h in client.c for consistent exit(CODE) implementation.
+
 2016-01-11:
 -----------
 Unix Sockets.
