@@ -30,6 +30,12 @@ main(int argc, char **argv) {
   memset(&address, 0, sizeof(struct sockaddr_in));
   address.sin_family = AF_INET;
   address.sin_addr.s_addr = INADDR_ANY;
+  /* uint32_t ipv4_addr = */
+  /*   (uint32_t)127 << 24 | */
+  /*   (uint32_t)  0 << 16 | */
+  /*   (uint32_t)  0 <<  8 | */
+  /*   (uint32_t)  1; */
+  /* address.sin_addr.s_addr = htonl(ipv4_addr); */
   address.sin_port = htons((uint16_t)30000);
 
   if ((socket_handle = socket(AF_INET, SOCK_DGRAM, 0)) == -1) {

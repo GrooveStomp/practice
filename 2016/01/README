@@ -1,3 +1,11 @@
+2016-01-14-2:
+-------------
+IPV4 Networking.
+This is an attempt to get non-Unix-Domain sockets working.
+Initially I tried getting two separate machines on the same internal network talking with each other. Each machine ran it's corresponding program just fine, but no messages seemed to be getting through.
+Afterwards I attempted to get both the client and server running on a single machine again but this fails as it did before - can't bind a socket to an address that's in use.
+I'll continue investigating tomorrow and see if I can make any progress.
+
 2016-01-14:
 -----------
 Signal trapping.
