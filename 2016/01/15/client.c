@@ -12,8 +12,6 @@
 #include <signal.h>
 #include <arpa/inet.h>
 
-#include "common.c"
-
 int socket_handle;
 
 void
