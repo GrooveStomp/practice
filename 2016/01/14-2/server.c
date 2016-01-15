@@ -9,6 +9,8 @@
 #include <unistd.h>
 #include <signal.h>
 
+#include "common.c"
+
 int socket_handle;
 
 void
@@ -28,10 +30,6 @@ main(int argc, char **argv) {
   memset(&address, 0, sizeof(struct sockaddr_in));
   address.sin_family = AF_INET;
   address.sin_addr.s_addr = INADDR_ANY;
-  /* address.sin_addr.s_addr = ( (192 << 24) | */
-  /*                             (168 << 16) | */
-  /*                             (  1 <<  8) | */
-  /*                             (125)       ); */
   address.sin_port = htons((uint16_t)30000);
 
   if ((socket_handle = socket(AF_INET, SOCK_DGRAM, 0)) == -1) {
