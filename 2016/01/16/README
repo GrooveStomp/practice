@@ -1,0 +1,25 @@
+TO DO:
+- Client and Server *must* run on separate machines (because client now needs to bind a socket to listen)
+- Server sends response to client after receiving message
+- Client filters so only server responses come in
+
+Requirements:
+
+- unixy platform that supports bsd sockets
+- gcc
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> server & # Runs server
+> client   # Runs client
+
+Terminate the server with Ctrl+C
