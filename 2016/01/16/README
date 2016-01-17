@@ -1,7 +1,14 @@
-TO DO:
-- Client and Server *must* run on separate machines (because client now needs to bind a socket to listen)
-- Server sends response to client after receiving message
-- Client filters so only server responses come in
+UDP Virtual Connection
+
+Taken largely from: http://gafferongames.com/networking-for-game-programmers/virtual-connection-over-udp/
+
+This models a virtual connection between 1 client and 1 server only.  No multiple clients business.
+If a long enough period of time remains, then the virtual connection is broken.
+The first message that is received with the correct protocol ID establishes the connection.
+
+To Do:
+- Have the server send messages to the client.
+- Have the client filter out messages not from the server.
 
 Requirements:
 
@@ -19,7 +26,16 @@ Building:
 
 Running:
 
-> server & # Runs server
-> client   # Runs client
+  Server:
 
-Terminate the server with Ctrl+C
+  > server
+
+  Client:
+
+  > client
+  $ [Client] Enter Server IPV4 address:
+  > <Enter IP address in IPV4 dotted form>
+  $ [Client] Enter Server Port:
+  > <Enter Port>
+  $ [Client] Enter your data (Ctrl+d or Ctrl+c to stop):
+  > <Enter input>
