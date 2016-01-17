@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <arpa/inet.h>
+#include <time.h>
 
 #include "common.c"
 
@@ -24,6 +25,10 @@ close_socket(int signo) {
 
 int
 main(int argc, char **argv) {
+
+  printf("+------------------------------------------------------------------------------+\n");
+  printf("|                             UDP Socket Server                                |\n");
+  printf("+------------------------------------------------------------------------------+\n");
   uint8_t packet[GSNET_PACKET_MAX_SIZE];
   struct gsnet_connection client = { 0 };
 
@@ -53,32 +58,48 @@ main(int argc, char **argv) {
     exit(EXIT_FAILURE);
   }
 
+  time_t last_time, curr_time;
+  if ((last_time = time(NULL)) == -1)
+    gsnet_error("time() returned -1\n");
+  double time_delta_s = 0;
+
   while(1) {
-    while(1) {
-      memset((void*)packet, 0, GSNET_PACKET_MAX_SIZE);
+    if ((curr_time = time(NULL)) == -1)
+      gsnet_error("time() returned -1\n");
+    time_delta_s = difftime(curr_time, last_time);
 
-      struct sockaddr_in from;
-      socklen_t from_length = sizeof(from);
-      if (recvfrom(socket_handle, (char*)packet, GSNET_PACKET_MAX_SIZE, 0, (struct sockaddr *)&from, &from_length) <= 0)
-        break;
+    if (memcmp(&client, &gsnet_null_connection, sizeof(struct gsnet_connection)) != 0 &&
+        (client.elapsed_time_seconds = time_delta_s) > CONNECTION_TIMEOUT_S) {
+      printf("[Server] Lost connection with client. Timed out.\n");
+      client.address = client.port = client.elapsed_time_seconds = 0;
+    }
 
-      int from_address = ntohl(from.sin_addr.s_addr);
-      int from_port = ntohs(from.sin_port);
+    memset((void*)packet, 0, GSNET_PACKET_MAX_SIZE);
 
-      if (memcmp(&client, &gsnet_null_connection, sizeof(struct gsnet_connection)) == 0) {
-        client.address = from_address;
-        client.port = from_port;
-        fprintf(stdout, "[Server] Connection initialized with IP: '%s' on port: '%d', message: '%s'\n",
-                inet_ntoa(from.sin_addr),
-                from_port,
-                gsnet_get_packet_data(packet));
-      }
-      else if (from_address == client.address && from_port == client.port) {
-        fprintf(stdout, "[Server] Message received: '%s'\n", gsnet_get_packet_data(packet));
-      }
-      else {
-        fprintf(stdout, "[Server] Filtered out message from IP:   '%s' on port: '%d'\n", inet_ntoa(from.sin_addr), from_port);
-      }
+    struct sockaddr_in from;
+    socklen_t from_length = sizeof(from);
+    if (recvfrom(socket_handle, (char*)packet, GSNET_PACKET_MAX_SIZE, 0, (struct sockaddr *)&from, &from_length) <= 0)
+      continue;
+
+    int from_address = ntohl(from.sin_addr.s_addr);
+    int from_port = ntohs(from.sin_port);
+
+    if (memcmp(&client, &gsnet_null_connection, sizeof(struct gsnet_connection)) == 0) {
+      client.address = from_address;
+      client.port = from_port;
+      fprintf(stdout, "[Server] Connection initialized with IP: '%s' on port: '%d', message: '%s'\n",
+              inet_ntoa(from.sin_addr),
+              from_port,
+              gsnet_get_packet_data(packet));
+      client.elapsed_time_seconds = 0;
+      last_time = curr_time;
+    }
+    else if (from_address == client.address && from_port == client.port) {
+      fprintf(stdout, "[Server] Message received: '%s'\n", gsnet_get_packet_data(packet));
+      last_time = curr_time;
+    }
+    else {
+      fprintf(stdout, "[Server] Filtered out message from IP:   '%s' on port: '%d'\n", inet_ntoa(from.sin_addr), from_port);
     }
   }
 
