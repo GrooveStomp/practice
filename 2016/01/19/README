@@ -1,0 +1,25 @@
+The intent of this program is to allow generating footnotes in html.
+I decided that I don't like embedded links in my posts on my website,
+then did some buggering to get footnotes working the way I wanted.
+Turns out that Jekyll and Markdown don't support what I want at all.
+
+I've been meaning to write my own static site generator in C for
+a while now, anyway.  This is just the first step there.
+
+Requirements:
+
+- unixy platform that supports bsd sockets
+- gcc
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> Run
