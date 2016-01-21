@@ -1,0 +1,24 @@
+Text replacement.
+The program is hardcoded to look for "{{ }}".
+It's also seeded with two variables: "url" and "label".
+For any given text, the string "{{ url }}" will be replaced with the value of the "url" variable and the
+string "{{ label }}" will be replaced with the value of the "label" variable.  Again, these are two
+hardcoded variables within the program. A proper implementation should use a map for lookup.
+
+Requirements:
+
+- unixy platform that supports bsd sockets
+- gcc
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> env/build/run "<a href=\"{{ url }}\">{{ label }}</a>"
