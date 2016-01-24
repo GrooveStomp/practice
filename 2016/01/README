@@ -1,3 +1,8 @@
+2016-01-24:
+-----------
+Copy file data into a buffer.
+The intent of this exercise is to just implement a buffer for operating on file data.
+
 2016-01-23:
 -----------
 Text Replacement, Part 2. Uses hashmap for user-defined key-value pairs.
