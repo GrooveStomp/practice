@@ -14,7 +14,13 @@ My previous text replacement implementation (r:2) is also used, also with bug fi
 The text replacement program simply looks up values in the hashmap and does the replacement.
 
 NOTE: I discovered kdbg(r:3) and really like it so far.  It is far superior to Nemiver as a gdb debugging
-frontend.
+frontend.  There is a known bug, however. Simply delete the problematic icon to continue.(r:4)
+
+----
+r:1 https://bitbucket.org/GrooveStomp/practice/src/5be45fac45b9c1c4db2f20dcd4402ead7c4a53d2/2015/12/15/?at=master
+r:2 https://bitbucket.org/GrooveStomp/practice/src/5be45fac45b9c1c4db2f20dcd4402ead7c4a53d2/2016/01/20/?at=master
+r:3 http://www.kdbg.org/
+r:4 https://bbs.archlinux.org/viewtopic.php?id=170379
 
 Requirements:
 

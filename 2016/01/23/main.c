@@ -67,11 +67,6 @@ int main(int argc, char *argv[])
     hash_map_add(env, argv[i], (void *)argv[i+1]);
   }
 
-  for (int i=1; i < argc-1; i+=2) {
-    hash_map_get(env, argv[i], &result);
-    printf("hash_map[%s]: %s\n", argv[i], (char *)result);
-  }
-
   char *replace_start, *replace_end, *stream;
   stream = argv[argc-1];
 
