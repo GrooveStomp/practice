@@ -1,3 +1,8 @@
+2016-01-27:
+-----------
+Program that lexes C keywords and comments.
+This is prep work for my C compiler that I'm working on in my spare time.
+
 2016-01-24:
 -----------
 Copy file data into a buffer.
