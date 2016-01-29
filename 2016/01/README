@@ -1,3 +1,7 @@
+2016-01-28:
+-----------
+Adds Symbol and Preprocessor command tokenization to the lexer.
+
 2016-01-27:
 -----------
 Program that lexes C keywords and comments.
