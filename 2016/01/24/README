@@ -1,0 +1,22 @@
+Copy file data into a buffer.
+The intent of this exercise is to just implement a buffer for operating on file data.
+It may be entirely redundant, but that's fine. It's an exercise. :-)
+
+Requirements:
+
+- gcc
+- kdbg
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> env/build/run size_of_buffer_in_bytes file_in_current_directory
+# eg: env/build/run 2048 main.c

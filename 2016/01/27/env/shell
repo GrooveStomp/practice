@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#-*- mode: sh -*-
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+function build() {
+    if [ ! -f env/build ]; then
+        mkdir -p env/build
+    fi
+
+    gcc -std=c99 -pedantic-errors -fextended-identifiers -g -x c -o env/build/run main.c
+}
+
+function run() {
+    if [ -f env/build/run ]; then
+        env/build/run
+    fi
+}
+
+function debug() {
+    local debugger=`which kdbg`
+    if [[ -f env/build/run ]] && [[ ! -z "$debugger" ]]; then
+        $($debugger env/build/run)
+    fi
+}

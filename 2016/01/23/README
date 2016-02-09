@@ -1,0 +1,42 @@
+Text Replacement, Part 2.
+This program takes a series of key/value pairs followed by text to be operated upon.
+For example:
+
+    env/build/run name Robert greeting Bonjour "{{ greeting }}, {{ name }}!"
+
+The result would be:
+
+    > Bonjour, Robert!
+
+The program uses my previous hash map implementation (r:1) but fixes some bugs in that.
+The key/value pairs are stored in a hashmap for lookup later.
+My previous text replacement implementation (r:2) is also used, also with bug fixes.
+The text replacement program simply looks up values in the hashmap and does the replacement.
+
+NOTE: I discovered kdbg(r:3) and really like it so far.  It is far superior to Nemiver as a gdb debugging
+frontend.  There is a known bug, however. Simply delete the problematic icon to continue.(r:4)
+
+----
+r:1 https://bitbucket.org/GrooveStomp/practice/src/5be45fac45b9c1c4db2f20dcd4402ead7c4a53d2/2015/12/15/?at=master
+r:2 https://bitbucket.org/GrooveStomp/practice/src/5be45fac45b9c1c4db2f20dcd4402ead7c4a53d2/2016/01/20/?at=master
+r:3 http://www.kdbg.org/
+r:4 https://bbs.archlinux.org/viewtopic.php?id=170379
+
+Requirements:
+
+- gcc
+- kdbg
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> env/build/run [key value]... replacement_text
+# eg: env/build/run name Robert greeting Bonjour "{{ greeting }}, {{ name }}!"
