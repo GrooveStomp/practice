@@ -1,0 +1,25 @@
+Assembly language programming.
+Finally I implemented a very simple program that calls into a subroutine.
+
+I ran into serious hurdles before because I was relying on output from objdump and didn't realize it wasn't valid assembly.
+I heavily leveraged the tutorials here: http://www.tutorialspoint.com/assembly_programming/index.htm
+
+Requirements:
+
+- gcc
+- nasm (If you actually build a legit assembly file)
+- ld (See previous)
+
+Setup:
+
+> cd /path/to/project/root
+> source env/shell
+
+Running:
+
+> build
+> run
+
+You can disassemble a source C file with:
+
+> disassemble file
