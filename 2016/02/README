@@ -1,3 +1,9 @@
+2016-02-16:
+-----------
+Started working through The Elements of Computing Systems.
+Implemented AND, NOT and OR in terms of NAND.
+Implemented XOR as a composite of NAND, OR and AND.
+
 2016-02-09:
 -----------
 Assembly language programming. Simple function call.
