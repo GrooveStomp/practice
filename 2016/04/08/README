@@ -1,0 +1,30 @@
+Linux Sound
+
+ALSA is the Kernel space interface to sound on Linux.
+ALSA provides a user-land API called `libasound' with documentation here: http://www.alsa-project.org/alsa-doc/alsa-lib/
+
+My goal with this practice program is to generate a simple signal and have it play back through the speakers.
+
+Requirements:
+
+- Linux Headers # apt-get install linux-headers-generic
+- Alsa sounds # gcc -lasound, #include <alsa/asoundlib.h>
+- C Math lib # gcc -lm, #include <math.h>
+- GCC
+
+Setup:
+
+> cd /path/to/project
+> source env/shell
+
+Build:
+
+> build
+
+Run:
+
+> run
+
+Debug:
+
+> debug
