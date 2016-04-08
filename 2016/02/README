@@ -1,3 +1,24 @@
+2016-02-18:
+-----------
+Drew schematic for 4-Way DMux.
+Implemented the following in The Elements of Computing Systems' hardware specification language:
+* 16-bit NOT
+* 16-bit AND
+* 16-bit OR
+* 8-way OR
+* 4-way DMux
+* 8-way DMux
+
+2016-02-17:
+-----------
+Drew schematics for Mux and DMux for The Elements of Computing Systems.
+
+2016-02-16:
+-----------
+Started working through The Elements of Computing Systems.
+Implemented AND, NOT and OR in terms of NAND.
+Implemented XOR as a composite of NAND, OR and AND.
+
 2016-02-09:
 -----------
 Assembly language programming. Simple function call.
