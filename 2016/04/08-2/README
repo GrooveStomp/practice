@@ -1,0 +1,15 @@
+Some introductory Rust programming.
+Mostly just copying material from: http://rustbyexample.com/index.html
+
+Requirements:
+- Rust
+
+Setup:
+> cd /path/to/project
+> source env/shell
+
+Build:
+> build
+
+Run:
+> run
