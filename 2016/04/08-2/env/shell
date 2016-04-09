@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#-*- mode: sh -*-
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+function build() {
+    if [ ! -f env/build ]; then
+        mkdir -p env/build
+    fi
+
+    rustc main.rs -o env/build/run
+}
+
+function run() {
+    if [ -f env/build/run ]; then
+        env/build/run
+    fi
+}
