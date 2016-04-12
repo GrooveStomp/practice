@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#-*- mode: sh -*-
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+function build() {
+    symlink_created=0
+    headers_path="/usr/src/linux-headers-$(uname -r)/include"
+
+    if [[ ! -e "${headers_path}/asm" ]] && [[ -e "${headers_path}/asm-generic" ]]; then
+        sudo ln -s "${headers_path}/asm-generic" "${headers_path}/asm"
+        symlink_created=1
+    fi
+
+    gcc -c -D __KERNEL__ -D MODULE main.c \
+        -o test.o \
+        -I /usr/src/linux-headers-$(uname -r)/include
+
+    if [[ "$symlink_created" == "1" ]]; then
+        sudo rm "${headers_path}/asm"
+    fi
+}
+
+function run() {
+  if [ -f env/build/run ]; then
+    env/build/run
+  fi
+}
+
+function disassemble() {
+    if [[ "-h" == "$1" ]] || [[ "--help" == "$1" ]]; then
+        echo "Usage: ${FUNCNAME[0]} source_file"
+        return
+    fi
+
+    gcc -S $1
+}
