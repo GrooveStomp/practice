@@ -1,0 +1,15 @@
+Rust By Example.
+s2.0 through s2.2
+
+Requirements:
+- Rust
+
+Setup:
+> cd /path/to/project
+> source env/shell
+
+Build:
+> build
+
+Run:
+> run
