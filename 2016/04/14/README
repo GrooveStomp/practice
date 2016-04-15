@@ -1,0 +1,37 @@
+My goal here is to build an interactive program in Rust.
+Originally I was hoping to write the entire program in Rust itself, but it appears this may not be so easy.
+To start with, I want to leverage SDL because I've tried working with XWindows before and it was painful.
+Secondly, there are Rust bindings for SDL, but they require also having the C SDL bindings installed...
+I figured it'd be better to sidestep any unnecessary wrapping and whatnot.
+
+The finaly configuration I have here, that I believe I'll continue to use is thus:
+1. Build the interactive program as a dynamic library.
+2. Build the "frontend" in C. That is, the bits that interface with the OS and SDL.
+3. Link the C frontend with the Rust library and have the C frontend pass essential data to the Rust backend for processing.
+
+This works!
+
+Currently the C Frontend creates a rendering context and allocates a memory buffer for SDL.
+Then it passes the memory buffer to the Rust library and the Rust library fills in the buffer.
+Finally, the Rust library returns and the C frontend uses the modified memory buffer to paint the window via SDL.
+
+For reference:
+- Calling rust from C: https://avacariu.me/articles/2014/calling-rust-from-c
+- Rust FFI: https://doc.rust-lang.org/book/ffi.html
+- Rust Crates and Linking: http://rustbyexample.com/crates.html
+
+Requirements:
+- Rust
+- SDL2
+- Rust's libc (provided here as a static library)
+- GCC
+
+Setup:
+> cd /path/to/project
+> source env/shell
+
+Build:
+> build
+
+Run:
+> run

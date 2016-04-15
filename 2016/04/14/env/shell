@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#-*- mode: sh -*-
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+function build() {
+    pushd $PROJECT_ROOT > /dev/null
+
+    if [ ! -d env/build ]; then
+        mkdir -p env/build
+    fi
+
+    rustc --extern libc=liblibc.rlib backend.rs -o env/build/libbackend.so
+
+    [ -f env/build/libbackend.so ] && gcc \
+        -std=c11 -pedantic-errors -fextended-identifiers -g -x c -o env/build/run main.c \
+        $(sdl2-config --cflags --libs) \
+        -Lenv/build -lbackend
+
+    popd > /dev/null
+}
+
+function clean() {
+    pushd $PROJECT_ROOT > /dev/null
+
+    if [ -d env/build ]; then
+        rm -rf env/build*
+    fi
+
+    popd > /dev/null
+}
+
+function run() {
+    pushd $PROJECT_ROOT > /dev/null
+
+    if [ -f env/build/run ]; then
+        LD_LIBRARY_PATH=env/build env/build/run
+    fi
+
+    popd > /dev/null
+}
