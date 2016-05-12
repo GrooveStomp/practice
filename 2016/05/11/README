@@ -1,0 +1,21 @@
+Musl glibc alternative.
+I've built musl on my machine and this is just a super simple program being
+compiled and linked with musl instead of glibc.
+
+Requirements:
+
+- musl
+- gcc
+
+Setup:
+
+> cd /path/to/project
+> source env/shell
+
+Building:
+
+> build
+
+Running:
+
+> run

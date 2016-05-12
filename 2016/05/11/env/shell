@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+function build() {
+    if [ ! -f env/build ]; then
+        mkdir -p env/build
+    fi
+
+    /usr/local/musl/bin/musl-gcc main.c -o env/build/run
+}
+
+function run() {
+    if [ -f env/build/run ]; then
+        env/build/run
+    fi
+}
