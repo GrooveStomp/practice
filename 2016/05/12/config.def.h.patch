@@ -1,0 +1,49 @@
+16a17
+>         GREEN,  
+21a23
+>         [GREEN]   = { .fg = COLOR_GREEN, .bg = -1, .fg256 = 128, .bg256 = -1, },
+26c28
+< #define SELECTED_ATTR   (COLOR(BLUE) | A_NORMAL)
+---
+> #define SELECTED_ATTR   (COLOR(GREEN) | A_NORMAL)
+28c30
+< #define NORMAL_ATTR     (COLOR(DEFAULT) | A_NORMAL)
+---
+> #define NORMAL_ATTR     (COLOR(DEFAULT) | A_NORMAL) 
+32c34
+< #define BAR_ATTR        (COLOR(BLUE) | A_NORMAL)
+---
+> #define BAR_ATTR        (COLOR(GREEN) | A_NORMAL)
+49c51
+< #define TAG_SEL      (COLOR(BLUE) | A_BOLD)
+---
+> #define TAG_SEL      (COLOR(GREEN) | A_BOLD)
+53c55
+< #define TAG_OCCUPIED (COLOR(BLUE) | A_NORMAL)
+---
+> #define TAG_OCCUPIED (COLOR(GREEN) | A_NORMAL)
+55c57
+< #define TAG_URGENT (COLOR(BLUE) | A_NORMAL | A_BLINK)
+---
+> #define TAG_URGENT (COLOR(GREEN) | A_NORMAL | A_BLINK)
+57c59
+< const char tags[][8] = { "1", "2", "3", "4", "5" };
+---
+> const char tags[][8] = { "sys", "web", "social", "blog", "code" };
+66,69c68,71
+< 	{ "[]=", tile },
+< 	{ "+++", grid },
+< 	{ "TTT", bstack },
+< 	{ "[ ]", fullscreen },
+---
+> 	{ "  | |=|  ", tile },
+> 	{ "  |+++|  ", grid },
+> 	{ "  |-.-|  ", bstack },
+> 	{ "  |   |  ", fullscreen },
+107a110
+> 
+212,213c215
+< 	{ .name = "sandy",       .argv = { "sandy", "-d", "-", NULL  }, .filter = true,  .color = false },
+< 	{ .name = "dvtm-editor", .argv = { "dvtm-editor", "-", NULL  }, .filter = true,  .color = false },
+---
+>         { .name = "jed",         .argv = { "jed", "+%d", "-", NULL   }, .filter = false, .color = false	},

@@ -1,0 +1,33 @@
+I did some configuration with dvtm.
+dvtm is an awesome text-mode program for terminals influenced heavily by dwm.
+You can get dvtm here: http://www.brain-dump.org/projects/dvtm/
+You can get dwm here: http://dwm.suckless.org
+
+Provided here are two patch files.
+After you grab dvtm, change to the source directory and apply the patches:
+
+> patch < config.def.h.patch
+> patch < dvtm-status.patch
+
+Then build normally.  See the appropriate documentation included with dvtm.
+
+So what did I change?
+
+dvtm provides 5 tags by default labelled 1 through 5.  I haven't adopted the tag
+mindset yet, so I renamed the tags into workspaces:
+
+[sys][web][social][blog][code]
+
+I also changed the representation of the current layout.  There are four:
+
+name:    tile | grid | bottom stack | fullscreen
+graphic: []=  | +++  | TTT          | [ ]
+
+I change the graphics to:
+
+name:    tile  | grid  | bottom stack | fullscreen
+graphic: | |=| | |+++| | |-.-|        | |   |
+
+Debatable, but I like it.  I also added two spaces before and after the graphic
+to separate the graphic from the tag names.
+

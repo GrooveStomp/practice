@@ -1,0 +1,18 @@
+6a7,15
+> function battery_status() {
+> 	percent=$(acpi -V | grep Battery | head -n 1 | grep -Eow "[0-9]+%")
+> 	echo "Bat: $percent"
+> }
+> 
+> function date_status() {
+>         date +%F\ %H:%M
+> }
+> 
+8c17
+< 	date +%H:%M
+---
+>         echo "$(battery_status) | $(date_status)"
+13c22
+< dvtm -s "$FIFO" "$@" 2> /dev/null
+---
+> dvtm -m ^\\ -s "$FIFO" "$@" 2> /dev/null
