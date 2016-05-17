@@ -1,3 +1,16 @@
+2016-05-17:
+-----------
+- Work on my C Lexer: https://bitbucket.org/GrooveStomp/c-lexer/src/2dd46566826d4b84176ef2f75d23b1cacf5f7d14/?at=rewrite
+- Project Euler problem in Rust: https://bitbucket.org/GrooveStomp/project-euler/src/071c9eb62c78d1a8283f3c508c98fcfd4300a1e0/rust/003/?at=master
+
+2016-05-16:
+-----------
+- Project Euler problem in Rust: https://bitbucket.org/GrooveStomp/project-euler/src/071c9eb62c78d1a8283f3c508c98fcfd4300a1e0/rust/002/?at=master
+
+2016-05-13:
+-----------
+- Project Euler problem in Rust: https://bitbucket.org/GrooveStomp/project-euler/src/071c9eb62c78d1a8283f3c508c98fcfd4300a1e0/rust/001/?at=master
+
 2016-05-12:
 -----------
 - Modifications to dvtm.
