@@ -1,0 +1,25 @@
+Textual UI (TUI) programming via Termbox.
+I've included the two demos from the Termbox project: 'output.c' and 'keyboard.c'
+but my program is named 'main.c'.
+Really simple dealio that shows a static string in a message box.
+Press 'Esc' key to quit.
+
+Requirements:
+
+- termbox (https://github.com/nsf/termbox)
+- python (To run Waf and build Termbox)
+- gcc
+- kdbg (If debugging)
+
+Setup:
+
+> cd /path/to/project
+> source env/shell
+
+Building:
+
+> build main.c (output.c and keyboard.c also work)
+
+Running:
+
+> run

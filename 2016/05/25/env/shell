@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#-*- mode: sh -*-
+
+export PROJECT_ROOT=$(pwd)
+export PATH=$PROJECT_ROOT/env:$PATH
+
+# Specify which source file to build.
+function build() {
+    if [ ! -f env/build ]; then
+        mkdir -p env/build
+    fi
+
+    gcc -std=c99 -pedantic-errors -fextended-identifiers -g -x c -o env/build/run $1 -static -ltermbox
+}
+
+function run() {
+    if [ -f env/build/run ]; then
+        env/build/run "$@"
+    fi
+}
+
+# Pass any parameters to 'debug' and these will be passed to the debugger.
+function debug() {
+    local debugger=`which kdbg`
+    if [[ -f env/build/run ]] && [[ ! -z "$debugger" ]]; then
+        $($debugger env/build/run -a "$@")
+    fi
+}
