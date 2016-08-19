@@ -1,7 +1,7 @@
 /******************************************************************************
  * File: gs.h
  * Created: 2016-07-14
- * Last Updated: 2016-08-18
+ * Last Updated: 2016-08-19
  * Creator: Aaron Oman (a.k.a GrooveStomp)
  * Notice: (C) Copyright 2016 by Aaron Oman
  *-----------------------------------------------------------------------------
@@ -50,17 +50,14 @@
                 char String##__LINE__[256];                             \
                 sprintf(String##__LINE__, "In %s() at line #%i: ", __func__, __LINE__); \
                 fprintf(stderr, String##__LINE__);                       \
-                __GSAbortWithMessage(__VA_ARGS__);                      \
+                fprintf(stderr, __VA_ARGS__); \
+                exit(EXIT_FAILURE); \
         }
 
-void
-__GSAbortWithMessage(char *FormatString, ...)
-{
-        va_list Args;
-        va_start(Args, FormatString);
-        fprintf(stderr, FormatString, Args);
-        exit(EXIT_FAILURE);
-}
+#define GS1024Inverse 1.0/1024
+#define GSBytesToKilobytes(X) (X) * GS1024Inverse
+#define GSBytesToMegabytes(X) GSBytesToKilobytes((X)) * GS1024Inverse
+#define GSBytesToGigabytes(x) GSBytesToMegabytes((X)) * GS1024Inverse
 
 /******************************************************************************
  * Boolean Definitions
