@@ -1,0 +1,14 @@
+use std
+
+const main = {
+        var add2, create_adder
+
+        create_adder = { x
+            -> { y
+                  -> y + x
+            }
+        }
+
+        add2 = create_adder(2)
+        std.put("add2(4): {}\n", add2(4))
+}

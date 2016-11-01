@@ -1,0 +1,16 @@
+use std
+
+const main = {
+        var a, fn
+
+        a = 123
+        fn = { x
+            std.put("inside closure: {}\n", x + a)
+            a++                 /* Modify the captured copy of a.       */
+        }
+
+        fn(123)                 /* Just call the function a afew times. */
+        fn(0)                   /* We increment "a"                     */
+        fn(0)                   /*   for each call                      */
+        std.put("a = {}\n", a)  /*   but it doesn't change in the env.  */
+}

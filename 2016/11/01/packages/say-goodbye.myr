@@ -1,0 +1,9 @@
+use std
+
+pkg demo =
+        const saygoodbye : (-> void)
+;;
+
+const saygoodbye = {
+        std.put("Goodbye\n")
+}

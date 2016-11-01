@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mbld -b package-demo say-goodbye.myr say-hello.myr main.myr
+rm main.o main.use say-goodbye.o say-goodbye.use say-hello.o say-hello.use

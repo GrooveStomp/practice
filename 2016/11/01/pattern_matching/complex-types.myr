@@ -1,0 +1,31 @@
+use std
+
+type u = union
+        `Some int
+        `None
+;;
+
+type s = struct
+        a : int
+        b : u
+        c : (int, int)
+;;
+
+const main = {
+        var u
+        var v : s
+
+        u = `Some 234
+        match u
+        | `Some 123: std.put("First branch\n")
+        | `Some x:   std.put("Got some {}\n", x)
+        | x:         std.put("Got nothing\n")
+        ;;
+
+        v = [.a = 123, .b=`Some 456, .c=(5, 10)]
+        match v
+        | [.a = 234]:            std.put("Should not be here!\n")
+        | [.a = 123, .c=(x, y)]: std.put("tuple is ({}, {})\n", x, y)
+        | _:
+        ;;
+}

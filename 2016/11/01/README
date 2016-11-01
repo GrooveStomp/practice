@@ -1,0 +1,13 @@
+Trying out the Myrddin language.
+I found Myrddin via the Suckless website, from the 2016 conference:
+    http://suckless.org/conferences/2016
+
+These code samples are mostly just copying examples from the Myrddin website:
+    https://myrlang.org/
+
+Myrddin looks interesting to me.  No garbage collection and low-level like C,
+but with some nice features from functional languatges.
+It comes across kind of like Rust, but without throwing lifespans in your face
+all the time.
+
+For all the examples, just run: `env/build'.

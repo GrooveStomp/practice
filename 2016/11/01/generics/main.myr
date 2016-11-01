@@ -1,0 +1,16 @@
+use std
+
+generic max = { x : @a::numeric, y : @a::numeric
+        if x > y
+                -> x
+        else
+                -> y
+        ;;
+}
+
+const main = {
+        std.put("Max of 'a' and 'e': {}\n", max('a', 'e'))
+        std.put("Max of 1 and 3: {}\n", max(1, 3))
+        std.put("Max of 'e' and 'a': {}\n", max('e', 'a'))
+        std.put("Max of 3 and 1: {}\n", max(3, 1))
+}

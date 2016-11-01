@@ -1,0 +1,8 @@
+use std
+
+const main = { args: byte[:][:] /* A slice of bytes slices. */
+        std.put("Hello-世界\n") /* Prints to stdout. */
+        for a in args
+                std.put("arg = {}\n", a)
+        ;;
+}

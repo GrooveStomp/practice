@@ -1,0 +1,9 @@
+use std
+use "say-hello.use"
+use "say-goodbye.use"
+
+const main = {
+        demo.sayhello()
+        std.put("yo!\n")
+        demo.saygoodbye()
+}

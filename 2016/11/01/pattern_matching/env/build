@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Build primitives.myr.
+mbld -b primitives primitives.myr && \
+  rm primitives.o primitives.use
+
+# Build complex-types.myr.
+mbld -b complex complex-types.myr && \
+  rm complex-types.o complex-types.use

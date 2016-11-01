@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Build hello.myr
+mbld -b hello hello.myr
+rm hello.o hello.use

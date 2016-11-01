@@ -1,0 +1,12 @@
+use std
+
+const main = {
+        var v
+
+        v = 234
+        match v
+        | 123: std.put("First branch\n")
+        | 234: std.put("Second branch\n")
+        | x:   std.put("What? Got {}\n", x)
+        ;;
+}

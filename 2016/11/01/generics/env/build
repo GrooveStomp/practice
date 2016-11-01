@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mbld -b generics main.myr && \
+    rm main.o main.use

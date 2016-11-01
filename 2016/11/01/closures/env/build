@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Build closures.myr example from the website.
+mbld -b closures closures.myr && \
+    rm closures.o closures.use
+
+# Build closures2.myr.
+mbld -b closures2 closures2.myr && \
+    rm closures2.o closures2.use
