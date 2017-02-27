@@ -1,35 +1,129 @@
 My ongoing collection of daily code practice.
-Inspired by Mike Acton at the inaugural HandmadeCon in 2015, these are small, throwaway programs used to hone
-my craft.
+Inspired by Mike Acton at the inaugural HandmadeCon in 2015, these are small,
+throwaway programs used to hone my craft.
 
-Unless otherwise stated, all source code here uses the Createive Commons Attribution 4.0 International License.
+Unless otherwise stated, all source code here uses the Createive Commons
+Attribution 4.0 International License.
 See: https://creativecommons.org/licenses/by/4.0/
 See: https://creativecommons.org/licenses/by/4.0/legalcode
 Attribution is appreciated, though not required.
 
-Because this is intended to be a daily, ongoing thing, this repository is structured according to calendar
-dates.  You will find folders named according to year at this level, followed by folders for each month,
-followed then by folders for each day.  Each day will be entirely self-contained, but I will copy the
-descriptive text into a README in the root folder for each month.  The structure looks like this:
+--------------------------------------------------------------------------------
+ Practice Summaries
+--------------------------------------------------------------------------------
 
-.
 ├── 2016
-│   ├── 01
-│   │   ├── 01
-│   │   │   ├── <files>
-│   │   │   ├── README
-│   │   ├── 02
-│   │   │   ├── <files>
-│   │   │   ├── README
-│   │   ├── ...
-│   │   ├── README
-│   ├── 02
-│   │   ├── 01
-│   │   │   ├── <files>
-│   │   │   ├── README
-│   │   ├── 02
-│   │   │   ├── <files>
-│   │   │   ├── README
-│   │   ├── ...
-│   │   ├── README
-│   └── ...
+│   ├── 11
+│   │   └── 01
+│   │       └── Playing around with the Myrddin language.
+│   ├── 08
+│   │   └── 18
+│   │       └── Work on a real effing Hash Map!
+│   ├── 05
+│   │   ├── 25
+│   │   │   └── Textual UI programming with Termbox.
+│   │   ├── 17
+│   │   │   └── Work on C Lexer.
+│   │   ├── 16
+│   │   │   └── Project Euler problem in Rust.
+│   │   ├── 13
+│   │   │   └── Project Euler problem in Rust.
+│   │   ├── 12
+│   │   │   └── Modifications to dvtm.
+│   │   └── 11
+│   │       └── Simple program built with musl and gcc.
+│   ├── 04
+│   │   ├── 14
+│   │   │   └── Rust FFI.
+│   │   ├── 13
+│   │   │   └── Learning Rust crates.
+│   │   ├── 12
+│   │   │   └── Rust by Example Section 2.
+│   │   ├── 11
+│   │   │   └── Rust by Example s1.2.2 through s1.2.3
+│   │   └── 18
+│   │       └── Linux sound with Alsa, Rust by Example s1.0 through s1.2.1.
+│   ├── 02
+│   │   ├── 18
+│   │   │   └── Schematic for 4-Way DMux (Nand to Tetris)
+│   │   ├── 17
+│   │   │   └── Schematics for Mux and DMux (Nand to Tetris)
+│   │   ├── 16
+│   │   │   └── Started work on Elements of Computing Systems (Nand to Tetris)
+│   │   ├── 11
+│   │   │   └── Linux kernel module.
+│   │   └── 09
+│   │       └── Assembly language programming. Simple function call.
+│   └── 01
+│       ├── 28
+│       │   └── Adds Symbol and Preprocessor command tokenization to the lexer.
+│       ├── 27
+│       │   └── Program that lexes C keywords and comments. This is prep work
+│       │       for my C compiler that I'm working on in my spare time.
+│       ├── 24
+│       │   └── Implement a buffer for operating on file data.
+│       ├── 23
+│       │   └── Text Replacement, Part 2. Hashmap for key-value pairs.
+│       ├── 20
+│       │   └── Text replacement.
+│       ├── 19
+│       │   └── Footnote markup generator for HTML.
+│       ├── 16
+│       │   └── UDP Virtual Connection.
+│       ├── 15
+│       │   └── IPV4 Networking - Actually working.
+│       ├── 14-2
+│       │   └── IPV4 Networking.
+│       ├── 14
+│       │   └── Signal trapping.
+│       ├── 11
+│       │   └── Unix sockets.
+│       ├── 08
+│       │   └── Socket programming intro.
+│       ├── 07
+│       │   └── Investigate changing framebuffer settings.
+│       ├── 06
+│       │   └── Direct framebuffer graphics programming.
+│       └── 05
+│           └── Tinkering with the Atari ST.
+└── 2015
+    └── 12
+        ├── 23
+        │   └── Really simple modifications to a basic NCurses program.
+        ├── 16
+        │   └── Binary Insertion Tree in C. This is an implementation of a
+        │       Binary insertion tree that uses a fixed, contiguous block of
+        │       memory.Really simple modifications to a basic NCurses program.
+        ├── 15
+        │   └── Naive Hash table implementation in C.
+        ├── 14
+        │   └── Studying assembly language and lots of staring at and thinking
+        │       about assembly code.
+        ├── 12
+        │   └── First stab at a Ludum Dare entry. It did not go far.
+        │       https://bitbucket.org/GrooveStomp/ludum-dare/
+        ├── 11
+        │   └── A very small ASM program copied from Wikipedia.
+        ├── 10
+        │   └── More Bezier curves! Animated, this time.
+        ├── 09
+        │   └── Bezier curves! I received two issues of pico-8 zine
+        │       (http://pico8fanzine.bigcartel.com/) in the mail today. After
+        │       flipping through, I felt motivated to create something.  I also
+        │       figured that Pico8 is sort of an ideal tool for daily code
+        │       practice, as it gives such easy access to drawing, input and
+        │       sound.
+        ├── 08
+        │   └── Joystick input! I picked up a Madcatz stick of some sort so I
+        │       could play space shooters and 6DOF shooters. Ever since then
+        │       I've been thinking of hooking it up for game prototypes. Well,
+        │       this is the first step!
+        ├── 07
+        │   └── Futzing around with stb_truetype as preparatory work for getting
+        │       font rendering work in another project. This took *way* too long
+        │       to finish. My intention was for about 30 minutes, but I wound up
+        │       taking close to 2 hours.
+        └── 06
+            └── Inspired by HandmadeCon, and in particular by Mike Acton's
+                advice on practice; this is a simple program built in 30 minutes
+                intended to develop my familiarity with SDL.
