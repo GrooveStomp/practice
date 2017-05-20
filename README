@@ -12,6 +12,10 @@ Attribution is appreciated, though not required.
  Practice Summaries
 --------------------------------------------------------------------------------
 
+├── 2017
+│   ├── 05
+│   │   └── 20
+│   │       └── Simple window and pixel buffer in C with XCB.
 ├── 2016
 │   ├── 11
 │   │   └── 01

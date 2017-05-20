@@ -1,0 +1,20 @@
+Create a window with XCB and render the contents of a pixel buffer.  The pixmap
+is a 100x100px image.  It starts black and every 500 microseconds a new pixel is
+painted white, starting in the top-left corner and moving horizontally then
+vertically to the lower right corner.  This is a demo to find the most minimal
+way to create a window an in-memory pixel buffer on Linux systems running X
+Windows.
+
+--------------------------------------------------------------------------------
+Requirements:
+
+- libxcb
+- libxcb-shm
+- gcc
+
+Building and Running:
+
+> ./build
+> ./main
+
+Press "q" to quit after the pixmap finishes painting.
